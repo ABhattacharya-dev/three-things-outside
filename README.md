@@ -53,12 +53,13 @@ These were desktop browser and simulated viewport checks. A physical phone camer
 - Inspect the page with a reduced-motion OS preference and confirm focus and scrolling remain usable. Check readable contrast and controls on the physical screen.
 - Test native Web Share on a supported device. The selectable text fallback was tested with Web Share unavailable.
 - In browser Network tools, confirm photo bytes are never sent and no request is made during inference. The page does request public libraries and model assets on initial load.
-- Review the two screenshots and public code and HTTPS demo links, then record the honest outdoor result in the DEV draft.
+- If you complete a real outdoor run, record its result separately; the published article does not claim one.
 
 ## Public demo and repository
 
 - **Live HTTPS demo:** https://main.dkm0k3epi65hg.amplifyapp.com/
 - **GitHub repository:** https://github.com/ABhattacharya-dev/three-things-outside
+- **Published Week 1 DEV article:** https://dev.to/arkaprava_bhattacharya_0d/three-things-outside-letting-ai-start-an-observation-then-putting-the-phone-away-2215
 - **Screenshots:** [15-second judge timer](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot1.png) · [completed field note](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot2.png)
 - **Curated DevRelay session:** https://dev.to/agent_sessions/799
 
@@ -68,8 +69,8 @@ The static Amplify manual deployment contains only `index.html`, `styles.css`, a
 
 COCO-SSD recognizes a fixed set of common objects, not subtle outdoor details, species, hazards, or context. Scores are model confidence estimates, not guarantees. Large or unusual image formats are rejected. Model download and first inference may be slow on mobile devices; availability depends on CDN/network access. A browser may suspend visual updates while the phone is locked, but the deadline is recalculated when it resumes. There is one latest note, with no history or sync.
 
-Built with [TensorFlow.js](https://github.com/tensorflow/tfjs) 4.22.0 and [COCO-SSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd) 2.2.3, using the COCO-SSD `lite_mobilenet_v2` base trained for the [COCO object classes](https://cocodataset.org/). Project code is MIT licensed; upstream libraries, model weights, and data retain their own licenses. Interface copy, flow, code, and the initial DEV draft were produced with Codex AI assistance. A human must verify the final code, claims, and field-test account before publication.
+Built with [TensorFlow.js](https://github.com/tensorflow/tfjs) 4.22.0 and [COCO-SSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd) 2.2.3, using the COCO-SSD `lite_mobilenet_v2` base trained for the [COCO object classes](https://cocodataset.org/). Project code is MIT licensed; upstream libraries, model weights, and data retain their own licenses. Codex AI produced substantial project code and the published DEV article at the project owner's request; DEV marks the post Fully Autonomous. The owner supplied the screenshots. No verified outdoor field test was provided or claimed.
 
 ## Submission status
 
-Week 1 closes **October 12, 2026 at 06:59 UTC / 12:29 PM IST**. The app, source, and curated agent session are public, but no DEV entry has been created or submitted. The challenge requires a new project built during the entry window and one English DEV submission using the official template and the `hf26challenge` tag; this draft also includes `devchallenge`. Before entering, the user must confirm they meet the [official eligibility rules](https://dev.to/page/official-hackathon-rules), including age, location, and DEV membership. `DEV_SUBMISSION.md` still needs the human outdoor account. Preserve a one-hour buffer before the deadline; any commits after the deadline must be noted here.
+The English Week 1 article was published on October 12, 2026 with the official template sections and the `devchallenge` and `hf26challenge` tags. Week 1 closes **October 12, 2026 at 06:59 UTC / 12:29 PM IST**. The app, source, curated agent session, and article are public. Prize eligibility has not been independently confirmed; the owner must ensure they meet the [official eligibility rules](https://dev.to/page/official-hackathon-rules), including age, location, and DEV membership. The article explicitly states that no verified outdoor field test was documented.

@@ -1,6 +1,7 @@
 ---
 title: "Three Things Outside: letting AI start an observation, then putting the phone away"
-published: false
+published: true
+url: https://dev.to/arkaprava_bhattacharya_0d/three-things-outside-letting-ai-start-an-observation-then-putting-the-phone-away-2215
 tags: devchallenge, hf26challenge
 ai_disclosure_level: fully_autonomous
 ---
@@ -13,7 +14,7 @@ Three Things Outside is a small mobile web exercise: take one outdoor photo, let
 
 The interesting result should be the human note, not the model's labels.
 
-**Real outdoor-test paragraph — add your own 3–5 sentences before publishing:** [Where did you use it? What did COCO-SSD notice? What did it miss? Did putting the phone away change your attention? What failed?]
+The screenshots show a 15-second judge-demo countdown and a completed note reading “a smell after rain.” They show the interaction, but I have not documented a verified outdoor field test, so I will not present them as proof of one. In the repeatable public-site test, a synthetic PNG gave the model no confident objects. The app said so plainly and still offered three prompts, including one about what lay beyond the frame. That is the behavior I wanted: an imperfect model can start an observation without pretending it saw everything.
 
 ## Demo
 
@@ -65,6 +66,4 @@ This [public curated DevRelay build and verification session](https://dev.to/age
 
 ## Credits and disclosure
 
-The app uses [TensorFlow.js](https://github.com/tensorflow/tfjs), [COCO-SSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd), and its [COCO object classes](https://cocodataset.org/). Project code is MIT licensed; upstream code, model weights, and data keep their own licenses. This initial article and substantial project code were produced by Codex AI at the user's request; the front matter marks the draft `fully_autonomous`. If the human author substantially rewrites it, review the disclosure level before publication. The human author must check every claim, add their own outdoor experience, and approve the final post.
-
-<!-- Overall prize only; no partner Prize Categories section is needed. Add teammate DEV handles here if a team contributed. Publish only after the user reviews the final content. -->
+The app uses [TensorFlow.js](https://github.com/tensorflow/tfjs), [COCO-SSD](https://github.com/tensorflow/tfjs-models/tree/master/coco-ssd), and its [COCO object classes](https://cocodataset.org/). Project code is MIT licensed; upstream code, model weights, and data keep their own licenses. Codex AI produced this article and substantial project code at the project owner's request. The post is marked `fully_autonomous` in DEV's AI disclosure. The two screenshots were supplied by the project owner; no real outdoor-test account was provided.
