@@ -19,9 +19,9 @@ The interesting result should be the human note, not the model's labels.
 
 **Live HTTPS demo:** https://main.dkm0k3epi65hg.amplifyapp.com/
 
-**Screenshot 1 — detection results and prompts:** [Add screenshot URL after reviewing the image for personal details]
+**Screenshot 1 — 15-second judge timer:** ![The judge demo timer asking the user to put the phone away](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot1.png)
 
-**Screenshot 2 — completed field note:** [Add screenshot URL after reviewing the note for personal details]
+**Screenshot 2 — completed field note:** ![A completed field note reading “a smell after rain”](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot2.png)
 
 For judges, the same flow has a clearly labeled 15-second demo mode after photo analysis. The standard exercise is three minutes.
 
@@ -59,7 +59,9 @@ An inspectable, replaceable open-source detector makes the photo-to-prompt loop 
 
 ## My Agent Session
 
-[Optional: add a reviewed DevRelay session link only after checking the transcript for secrets and personal data; otherwise remove this section.]
+This [curated DevRelay build and verification session](https://dev.to/agent_sessions/three-things-outside-curated-build-and-verification-session-kq5qyi) records selected, paraphrased milestones. It contains no raw tool logs, private machine paths, credentials, or photos. The session is currently unpublished; verify access and publication state before publishing this article.
+
+{% agent_session 799 %}
 
 ## Credits and disclosure
 

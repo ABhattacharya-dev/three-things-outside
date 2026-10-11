@@ -53,12 +53,14 @@ These were desktop browser and simulated viewport checks. A physical phone camer
 - Inspect the page with a reduced-motion OS preference and confirm focus and scrolling remain usable. Check readable contrast and controls on the physical screen.
 - Test native Web Share on a supported device. The selectable text fallback was tested with Web Share unavailable.
 - In browser Network tools, confirm photo bytes are never sent and no request is made during inference. The page does request public libraries and model assets on initial load.
-- Save two screenshots without private details, verify public code and HTTPS demo links, and record the honest outdoor result in the DEV draft.
+- Review the two screenshots and public code and HTTPS demo links, then record the honest outdoor result in the DEV draft.
 
 ## Public demo and repository
 
 - **Live HTTPS demo:** https://main.dkm0k3epi65hg.amplifyapp.com/
 - **GitHub repository:** https://github.com/ABhattacharya-dev/three-things-outside
+- **Screenshots:** [15-second judge timer](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot1.png) · [completed field note](https://raw.githubusercontent.com/ABhattacharya-dev/three-things-outside/main/assets/Screenshot2.png)
+- **Curated DevRelay session:** https://dev.to/agent_sessions/three-things-outside-curated-build-and-verification-session-kq5qyi (currently an unpublished session draft)
 
 The static Amplify manual deployment contains only `index.html`, `styles.css`, and `app.js` at the archive root. There is no build command. Requests for `README.md`, `DEV_SUBMISSION.md`, `AGENTS.md`, and `self-check.html` returned 404 on the public host. The public browser loaded the real model and completed the 15-second flow with a valid synthetic PNG and zero confident detections. No AWS SDK or browser credentials are shipped.
 
@@ -70,4 +72,4 @@ Built with [TensorFlow.js](https://github.com/tensorflow/tfjs) 4.22.0 and [COCO-
 
 ## Submission status
 
-Week 1 closes **October 12, 2026 at 06:59 UTC / 12:29 PM IST**. The app is deployed and its source is public, but no DEV entry has been created or submitted. The challenge requires a new project built during the entry window and one English DEV submission using the official template and the `hf26challenge` tag; this draft also includes `devchallenge`. Before entering, the user must confirm they meet the [official eligibility rules](https://dev.to/page/official-hackathon-rules), including age, location, and DEV membership. `DEV_SUBMISSION.md` still needs screenshots and the human outdoor account. Preserve a one-hour buffer before the deadline; any commits after the deadline must be noted here.
+Week 1 closes **October 12, 2026 at 06:59 UTC / 12:29 PM IST**. The app is deployed and its source is public, but no DEV entry has been created or submitted. The challenge requires a new project built during the entry window and one English DEV submission using the official template and the `hf26challenge` tag; this draft also includes `devchallenge`. Before entering, the user must confirm they meet the [official eligibility rules](https://dev.to/page/official-hackathon-rules), including age, location, and DEV membership. `DEV_SUBMISSION.md` still needs the human outdoor account; the saved agent session must be made public if judges are to open its link. Preserve a one-hour buffer before the deadline; any commits after the deadline must be noted here.
