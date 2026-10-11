@@ -59,7 +59,7 @@ An inspectable, replaceable open-source detector makes the photo-to-prompt loop 
 
 ## My Agent Session
 
-This [curated DevRelay build and verification session](https://dev.to/agent_sessions/three-things-outside-curated-build-and-verification-session-kq5qyi) records selected, paraphrased milestones. It contains no raw tool logs, private machine paths, credentials, or photos. The session is currently unpublished; verify access and publication state before publishing this article.
+This [public curated DevRelay build and verification session](https://dev.to/agent_sessions/799) records selected, paraphrased milestones. It contains no raw tool logs, private machine paths, credentials, or photos.
 
 {% agent_session 799 %}
 
