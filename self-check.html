@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Three Things Outside — self-check</title><link rel="stylesheet" href="styles.css"><script defer src="app.js"></script></head>
+<body><main class="shell"><h1>Logic self-check</h1><p id="result" role="status">Running…</p><ol id="checks"></ol></main>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+  const { timeLeft, formatTime, topDetections, makePrompts } = window.ThreeThingsLogic;
+  const cases = [
+    ['timer rounds up and stops at zero', timeLeft(1600, 0) === 2 && timeLeft(1000, 1000) === 0 && timeLeft(1000, 2000) === 0],
+    ['timer displays minutes and seconds', formatTime(180) === '3:00' && formatTime(15) === '0:15'],
+    ['detections filter, sort, and cap at three', (() => { const found = topDetections([{class:'cat',score:.7},{class:'dog',score:.9},{class:'bird',score:.49},{class:'bench',score:.8},{class:'tree',score:.6}]); return found.length === 3 && found.map(x => x.class).join(',') === 'dog,bench,cat'; })()],
+    ['prompts always include three, with a human-missed ending', makePrompts([]).length === 3 && makePrompts([{class:'dog'}]).length === 3 && makePrompts([])[0].includes('no confident objects') && makePrompts([{class:'dog'}])[0].includes('dog') && makePrompts([])[2].includes('AI miss')]
+  ];
+  document.getElementById('checks').replaceChildren(...cases.map(([name, passed]) => { const li = document.createElement('li'); li.textContent = `${passed ? 'PASS' : 'FAIL'} — ${name}`; return li; }));
+  const failures = cases.filter(([, passed]) => !passed).length;
+  document.getElementById('result').textContent = failures ? `${failures} check(s) failed` : 'All 4 checks passed';
+  document.getElementById('result').style.color = failures ? '#8b2522' : '#345d39';
+});
+</script></body></html>

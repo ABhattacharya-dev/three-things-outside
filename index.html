@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1e8">
+  <meta name="description" content="A three-minute outdoor observation with local, open-source AI.">
+  <title>Three Things Outside</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.22.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd@2.2.3/dist/coco-ssd.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="shell">
+    <header class="masthead"><div class="mark" aria-hidden="true">✳</div><span>THREE THINGS<br>OUTSIDE</span><span class="edition">A SMALL FIELD EXERCISE</span></header>
+    <main id="main">
+      <section id="start" class="screen" aria-labelledby="start-title">
+        <p class="eyebrow">01 / LOOK CLOSER</p>
+        <h1 id="start-title" tabindex="-1">A little less screen.<br><em>A little more world.</em></h1>
+        <p class="lead">Take one outdoor photo. Open-source AI notices a few objects, then gives you three things to look for. Put your phone away for three minutes. Come back with one note of your own.</p>
+        <div class="leafline" aria-hidden="true">✳ ───── ✳</div>
+        <div class="notice"><strong>Your photo stays here.</strong> The model runs in this browser; your image is never uploaded or saved. The first visit needs a download of the model and libraries. Inference runs locally after they load.</div>
+        <p id="model-status" class="status" role="status" aria-live="polite">Loading the model… This may take a moment on your first visit.</p>
+        <button id="retry-model" class="button secondary" type="button" hidden>Retry model loading</button>
+        <div id="picker" hidden>
+          <label class="file-label" for="photo">Choose or take one outdoor photo</label>
+          <input id="photo" type="file" accept="image/*" capture="environment" aria-describedby="photo-help">
+          <p id="photo-help" class="hint">A JPEG, PNG, or WebP image up to 12 MB. The image is used only in this page.</p>
+          <p id="photo-error" class="error" role="alert" hidden></p>
+          <canvas id="preview" class="preview" aria-label="Selected photo preview" hidden></canvas>
+          <button id="analyze" class="button" type="button" disabled>Analyze this photo <span aria-hidden="true">↗</span></button>
+        </div>
+        <article id="latest" class="latest" hidden><p class="eyebrow">YOUR LAST FIELD NOTE</p><p id="latest-note"></p><p id="latest-meta" class="hint"></p></article>
+      </section>
+
+      <section id="results" class="screen" aria-labelledby="results-title" hidden>
+        <p class="eyebrow">02 / STEP OUTSIDE</p>
+        <h2 id="results-title" tabindex="-1">The model looked.<br><em>Now it’s your turn.</em></h2>
+        <p id="detection-intro" class="lead"></p>
+        <ul id="detections" class="detections" aria-label="Detected objects"></ul>
+        <p class="caution">These are guesses, not species or safety identifications. Never use them to decide whether a plant, animal, place, or object is safe.</p>
+        <h3>Your three prompts</h3>
+        <ol id="prompts" class="prompts"></ol>
+        <p class="hint">Read these, then put your phone away. The timer keeps time even when the screen sleeps.</p>
+        <button id="begin" class="button" type="button">Begin 3 minutes outside <span aria-hidden="true">↗</span></button>
+        <button id="demo" class="text-button" type="button">15-second judge demo mode</button>
+      </section>
+
+      <section id="timing" class="screen timer-screen" aria-labelledby="timer-title" hidden>
+        <p class="eyebrow">03 / PHONE AWAY</p>
+        <h2 id="timer-title" tabindex="-1">Go see what<br><em>the model missed.</em></h2>
+        <p id="mode-label" class="hint"></p>
+        <div id="clock" class="clock" role="timer" aria-live="off">3:00</div>
+        <p>Put your phone away. Look around, listen, and notice one thing that did not fit inside the photo.</p>
+        <p id="timer-message" class="status" role="status" aria-live="polite">The timer is running.</p>
+      </section>
+
+      <section id="note-screen" class="screen" aria-labelledby="note-title" hidden>
+        <p class="eyebrow">04 / A HUMAN NOTE</p>
+        <h2 id="note-title" tabindex="-1">What did you notice<br><em>that AI missed?</em></h2>
+        <form id="note-form">
+          <label for="field-note">Your field note</label>
+          <textarea id="field-note" rows="5" maxlength="280" required placeholder="A moving shadow, a smell after rain, a sound beyond the frame…" aria-describedby="note-help"></textarea>
+          <p id="note-help" class="hint">One short observation, up to 280 characters. Only this text, the time, and detected class names are saved on this device.</p>
+          <button class="button" type="submit">Complete the exercise <span aria-hidden="true">↗</span></button>
+        </form>
+      </section>
+
+      <section id="complete" class="screen" aria-labelledby="complete-title" hidden>
+        <p class="eyebrow">FIELD NOTE / COMPLETE</p>
+        <div class="finish-mark" aria-hidden="true">✳</div>
+        <h2 id="complete-title" tabindex="-1">You saw more<br><em>than the model.</em></h2>
+        <blockquote id="completed-note"></blockquote>
+        <p id="completed-meta" class="hint"></p>
+        <p id="storage-status" class="status" role="status" aria-live="polite"></p>
+        <button id="share" class="button" type="button">Share text summary <span aria-hidden="true">↗</span></button>
+        <div id="share-fallback" hidden><label for="share-text">Copy this text summary</label><textarea id="share-text" rows="7" readonly></textarea></div>
+        <button id="restart" class="text-button" type="button">Begin another exercise</button>
+      </section>
+    </main>
+    <footer>OPEN EYES, OPEN SOURCE <span aria-hidden="true">✳</span> NO PHOTO UPLOADS</footer>
+  </div>
+</body>
+</html>
